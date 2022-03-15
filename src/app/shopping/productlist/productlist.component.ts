@@ -31,5 +31,9 @@ export class ProductlistComponent implements OnInit {
   {
     this.selectedProduct=product;
   }
+  catch(value:any){
+    this.selectedProduct={};
+    this.products=this.products.filter((data:any)=>data.id!=value);
+  }
 
 }
