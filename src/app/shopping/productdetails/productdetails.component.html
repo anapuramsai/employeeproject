@@ -1,0 +1,11 @@
+<div>
+    <img src="{{product.image}}" alt="image" width="40%">
+            <div>{{product.id}}</div>       
+            <div>{{product.title}}</div>
+            <div>{{product.price}}</div>
+            <div>{{product.description}}</div>
+            <div>{{product.category}}</div>
+            <div>{{product.rating?.rate}},{{product.rating?.count}}</div> 
+            <button (click)="delete()">delete</button> 
+            <button (click)="addtocart()">addtocart</button>
+</div>

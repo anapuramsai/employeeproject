@@ -1,0 +1,17 @@
+.parent{
+    height: 100%;
+    width: 100%;
+}
+.a{
+    height: 100%;
+    background-color: crimson;
+    padding: 0px;
+}
+.b{
+    height: 100%;
+    background-color: darkolivegreen;
+    padding: 0px;
+}
+.div1{
+    border: 2px solid black;
+}

@@ -1,0 +1,11 @@
+<div>abc</div>
+<ng-container>def</ng-container>
+<ng-template #FE>
+    <p>abs</p>
+    <p>klm</p>
+</ng-template>
+<ng-template #BE>
+    <p>API</p>
+    <p>DB access</p>
+</ng-template>
+<ng-container *ngTemplateOutlet="false?FE:BE"></ng-container>

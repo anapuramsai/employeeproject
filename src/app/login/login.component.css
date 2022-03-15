@@ -1,0 +1,36 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;  
+    display: flex;
+}
+.child1{
+    height: 100vh;
+    width: 50vw;
+    background-color: gold;
+    background-image: url("/assets/lead-image.png");
+}
+.child2{
+    height: 100vh;
+    width: 50vw;  
+    background-color: khaki;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+.b1{
+    margin-top: 90%;
+}
+.aa{
+    color: brown;
+}
+button{
+    background-color: green;
+    padding: 3px 15px;
+    width: 65%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

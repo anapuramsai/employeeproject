@@ -1,0 +1,55 @@
+<div class="parent">
+        <div class="child1">
+            <div class="a1">
+                <h4>Saikiran</h4>
+                <p>anapuramsaikiran@gmail.com</p>
+            </div>
+            <hr>
+            <div class="a2">
+                <ul>
+                    <div>
+                        <li><h4><i class="fa fa-user-circle-o" style="font-size:24px"></i>ACCOUNT PROFILE</h4></li>
+                    </div>
+                    <div>
+                        <li><h4><i class="fa fa-arrows-h" style="font-size:24px"></i>EXERCISE</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="about-us">about-us</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="contact-us"><i class="fa fa-user-plus" style="font-size:24px"></i>contact-us</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="allemployees"><i class="fa fa-users" style="font-size:24px"></i>ALLEMPLOYEES</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="createemployee"><i class="fa fa-user-plus" style="font-size:24px"></i>CREATEEMPLOYEE</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="roles">roles</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="employeedetails">employeedetails</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="communication">communication</h4></li>
+                    </div>
+                    <div>
+                        <li><h4 routerLink="shopping">shopping</h4></li>
+                    </div>
+                </ul>
+            </div>
+            <br>
+            <hr> 
+            <div class="b">
+                <button type="button" class="btn btn-primary" routerLink="/login">LOGOUT</button>
+            </div>
+        </div>
+        <div class="child2">
+            <router-outlet></router-outlet>
+            <!-- <div class="b1">
+                <p>PERSONEL PROGRESS</p>
+                <p><button type="button" class="btn btn-primary">CONTACT SUPPORT</button></p>
+            </div> -->
+        </div>
+</div>

@@ -1,0 +1,24 @@
+<p>employeedetails works!</p>
+<!-- <p>{{details|json}}</p> -->
+<div class="row">
+    <div class="col-lg-3"><h4>Name:</h4>{{details.name}}</div>
+    <div class="col-lg-3"><h4>mobile:</h4>{{details.mobile}}</div>
+    <div class="col-lg-3"><h4>email:</h4>{{details.email}}</div>
+</div>
+<div class="row">
+    <div class="col-lg-4"><h2>address:</h2></div>
+</div>
+<div class="row">
+    <div class="col-lg-6">         
+        <div class="col-lg"><h4>addressLine:</h4>{{details.address.addressLine}}</div>
+        <div class="col-lg"><h4>city:</h4>{{details.address.city}}</div>
+        <div class="col-lg"><h4>state:</h4>{{details.address.state}}</div>
+        <div class="col-lg"><h4>pincode:</h4>{{details.address.pincode}}</div>
+    </div>
+        <div class="col-lg"><h2>education:</h2></div>  
+        <div class="col-lg-6" *ngFor="let education of details.education">                            
+            <div class="col-lg"><h4>qualification:</h4>{{education.qualification}}</div>
+            <div class="col-lg"><h4>year:</h4>{{education.year}}</div>
+            <div class="col-lg"><h4>percentage:</h4>{{education.percentage}}</div>
+        </div>
+</div>

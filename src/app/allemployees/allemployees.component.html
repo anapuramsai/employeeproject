@@ -1,0 +1,55 @@
+<div class="container"> 
+<input type="text" [(ngModel)]="search">
+<button (click)="filter()">search</button>
+<label>SortBy</label>
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>mobile</option>
+    <option>email</option>
+    <option>dob</option>
+    <option>address</option>
+    <option>education</option>
+    <option>role</option>
+    <option>id</option>
+</select>
+<label>Order</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">Sort</button>        
+    <table class="allemployee">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>mobile</th>
+          <th>email</th>
+          <th>dob</th>
+          <th>address</th>
+          <th>education</th>
+          <th>role</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let allemployee of allemployees">
+          <td>{{allemployee.name}}</td>
+          <td>{{allemployee.mobile}}</td>
+          <td>{{allemployee.email}}</td>
+          <td>{{allemployee.role}}</td>
+          <td>{{allemployee.dob}}</td>
+          <td>{{allemployee.address.addressLine}},{{allemployee.address.city}},{{allemployee.address.state}},{{allemployee.address.pincode}}</td>
+          <td>{{allemployee.education}}</td>
+          <td>{{allemployee.role}}</td>
+          <td>{{allemployee.id}}</td>
+          <td><button (click)="view(allemployee.id)">view</button></td>
+        </tr>
+      </tbody>
+    </table>
+  <label>page</label>
+<input type="text" [(ngModel)]="page">
+<label>limit</label>
+<input type="text" [(ngModel)]="limit">
+<button (click)="Next()">Next</button>
+</div>
+

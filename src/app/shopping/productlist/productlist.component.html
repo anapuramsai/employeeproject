@@ -1,0 +1,21 @@
+<div class="parent">
+   <div class="col-lg-6 a">
+      <div class="row div1" *ngFor="let product of products">
+         <div class="col-lg-6">
+            <img src="{{product.image}}" alt="image" width="50%">
+         </div>
+         <div class="col-lg-6"> 
+               <div>{{product.id}}</div>       
+               <div>{{product.title}}</div>
+               <div>{{product.price}}</div>
+               <div>{{product.description}}</div>
+               <div>{{product.category}}</div>
+               <div>{{product.rating?.rate}},{{product.rating?.count}}</div>                
+         </div> 
+         <button (click)="view(product)">view</button>        
+      </div>    
+   </div>
+   <div class="col-lg-6 b">
+         <app-productdetails [product]="selectedProduct"></app-productdetails>
+   </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="parent">    
+        <div class="child1">                 
+        </div>
+        <div class="child2">
+            <form [formGroup]="loginForm">
+                <label for="name"><h4>ACCOUNT LOGIN</h4></label>
+                    <div class="col-sm-8">
+                        <input type="text" id="name" class="form-control" placeholder="username" name="name" formControlName="username" value="name">
+                        <div class="aa" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                            <p *ngIf="loginForm.get('username')?.errors?.['required']">this field required</p>
+                         </div> 
+                         <br>
+                        <input type="password" id="name" class="form-control" placeholder="password" name="name" formControlName="password" value="password">
+                        <div class="aa" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                            <p *ngIf="loginForm.get('password')?.errors?.['required']">this field required</p>
+                         </div>
+                    </div>  
+                     <br>      
+                    
+                       <h4><button (click)="SINGIN()">SINGIN</button></h4>
+                   
+                    <p>Forget<b>username/password?</b></p>
+                    <p class="b1">SINGUP</p>
+           </form>
+        </div>   
+</div>

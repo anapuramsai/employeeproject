@@ -1,0 +1,196 @@
+<div class="a">
+    <form [formGroup]="createemployeeForm">
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="name"> Name </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="name" class="form-control" placeholder="Enter name" name="name" formControlName="name" [ngClass]="createemployeeForm.get('name')?.invalid &&createemployeeForm.get('name')?.touched?'bb':'bc'">
+        <div class="aa" *ngIf="createemployeeForm.get('name')?.invalid && createemployeeForm.get('name')?.touched">
+            <p *ngIf="createemployeeForm.get('name')?.errors?.['required']">this field required</p>
+            <p *ngIf="createemployeeForm.get('name')?.errors?.['minlength']">min 3 char required</p>
+            <p *ngIf="createemployeeForm.get('name')?.errors?.['maxlength']">max 15 char required</p>        
+         </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="mobile"> mobile </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="mobile" class="form-control" placeholder="Enter mobile" name="mobile" formControlName="mobile" [ngClass]="createemployeeForm.get('mobile')?.invalid &&createemployeeForm.get('mobile')?.touched?'bb':'bc'">
+        <div class="aa" *ngIf="createemployeeForm.get('mobile')?.invalid && createemployeeForm.get('mobile')?.touched">
+            <p *ngIf="createemployeeForm.get('mobile')?.errors?.['required']">this field required</p>
+            <p *ngIf="createemployeeForm.get('mobile')?.errors?.['minlength']">min 3 char required</p>
+            <p *ngIf="createemployeeForm.get('mobile')?.errors?.['maxlength']">max 10 char required</p>
+         </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="email"> email </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="email" class="form-control" placeholder="Enter email" name="email" formControlName="email" [ngClass]="createemployeeForm.get('email')?.invalid &&createemployeeForm.get('email')?.touched?'bb':'bc'">
+        <div class="aa" *ngIf="createemployeeForm.get('email')?.invalid && createemployeeForm.get('email')?.touched">
+            <p *ngIf="createemployeeForm.get('email')?.errors?.['required']">this field required</p>
+         </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="dob"> dob </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="date" id="dob" class="form-control" placeholder="Enter dob" name="dob" formControlName="dob" [ngClass]="createemployeeForm.get('dob')?.invalid &&createemployeeForm.get('dob')?.touched?'bb':'bc'">
+        <div class="aa" *ngIf="createemployeeForm.get('dob')?.invalid && createemployeeForm.get('dob')?.touched">
+            <p *ngIf="createemployeeForm.get('dob')?.errors?.['required']">this field required</p>
+         </div>
+        </div>
+    </div>
+    <div formGroupName="address">
+    <label> address: </label>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="addressLine"> addressLine </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="addressLine" class="form-control" placeholder="Enter addressLine" name="addressLine" formControlName="addressLine" [ngClass]="createemployeeForm.get('address')?.get('addressLine')?.invalid &&createemployeeForm.get('address')?.get('addressLine')?.touched?'bb':'bc'">
+        <div class="ac" *ngIf="createemployeeForm.get('address')?.get('addressLine')?.invalid && createemployeeForm.get('address')?.get('addressLine')?.touched">
+            <p *ngIf="createemployeeForm.get('address')?.get('addressLine')?.errors?.['required']">this field required</p>
+        </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="city"> city </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="city" class="form-control" placeholder="Enter city" name="city" formControlName="city" [ngClass]="createemployeeForm.get('address')?.get('city')?.invalid &&createemployeeForm.get('address')?.get('city')?.touched?'bb':'bc'">
+        <div class="ac" *ngIf="createemployeeForm.get('address')?.get('city')?.invalid && createemployeeForm.get('address')?.get('city')?.touched">
+            <p *ngIf="createemployeeForm.get('address')?.get('city')?.errors?.['required']">this field required</p>
+        </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="state"> state </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="state" class="form-control" placeholder="Enter state" name="state" formControlName="state" [ngClass]="createemployeeForm.get('address')?.get('state')?.invalid &&createemployeeForm.get('address')?.get('state')?.touched?'bb':'bc'">
+        <div class="ac" *ngIf="createemployeeForm.get('address')?.get('state')?.invalid && createemployeeForm.get('address')?.get('state')?.touched">
+            <p *ngIf="createemployeeForm.get('address')?.get('state')?.errors?.['required']">this field required</p>
+        </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+        <label for="pincode"> pincode </label>
+        </div>
+        <div class="col-sm-8">
+        <input type="text" id="pincode" class="form-control" placeholder="Enter pincode" name="pincode" formControlName="pincode" [ngClass]="createemployeeForm.get('address')?.get('pincode')?.invalid &&createemployeeForm.get('address')?.get('pincode')?.touched?'bb':'bc'">
+        <div class="ac" *ngIf="createemployeeForm.get('address')?.get('Pincode')?.invalid && createemployeeForm.get('address')?.get('Pincode')?.touched">
+            <p *ngIf="createemployeeForm.get('address')?.get('Pincode')?.errors?.['required']">this field required</p>
+            <p *ngIf="createemployeeForm.get('address')?.get('Pincode')?.errors?.['min']">min 6 char required</p>
+            <p *ngIf="createemployeeForm.get('address')?.get('Pincode')?.errors?.['max']">max 6 char required</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div formArrayName="education">
+        <div *ngFor="let education of educationFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <label>qualification:</label>
+                <input type="text" formControlName="qualification" [ngClass]="educationFormArray.controls[i].get('qualification')?.invalid &&educationFormArray.controls[i].get('qualification')?.touched?'bb':'bc'">
+                <div class="ab" *ngIf="educationFormArray.controls[i].get('qualification')?.touched"> 
+                    <p *ngIf="educationFormArray.controls[i].get('qualification')?.errors?.['required']">this field required</p>
+                </div>
+                <label>year:</label>
+                <input type="text" formControlName="year" [ngClass]="educationFormArray.controls[i].get('year')?.invalid &&educationFormArray.controls[i].get('year')?.touched?'bb':'bc'">
+                <div class="ac" *ngIf="educationFormArray.controls[i].get('year')?.touched"> 
+                    <p *ngIf="educationFormArray.controls[i].get('year')?.errors?.['required']">this field required</p>
+                </div>
+                <label>percentage:</label>
+                <input type="text" formControlName="percentage" [ngClass]="educationFormArray.controls[i].get('percentage')?.invalid &&educationFormArray.controls[i].get('percentage')?.touched?'bb':'bc'">
+                <div class="ac" *ngIf="educationFormArray.controls[i].get('percentage')?.touched"> 
+                    <p *ngIf="educationFormArray.controls[i].get('percentage')?.errors?.['required']">this field required</p>
+                </div>
+                <button (click)="delete(i)">delete</button>
+            </div>           
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+           <label for="name"> role: </label>
+        </div>
+        <div class="col-sm-8">
+             <label> Frontend Engineer </label>
+            <input type="radio" id="name" value="Frontend Engineer" formControlName="role">
+            <label> Backend Engineer </label>
+            <input type="radio" id="name" value="Backend Engineer" formControlName="role">
+        </div>
+    </div>
+    <div *ngIf="createemployeeForm.get('role')?.value=='Frontend Engineer'">
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='HTML'">
+        <label for="name"> HTML </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter HTML" name="HTML" formControlName="HTML">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='CSS'">
+        <label for="name"> CSS </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter CSS" name="CSS" formControlName="CSS">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='Angular'">
+        <label for="name">Angular </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter Angular" name="Angular" formControlName="Angular">
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='Javascript'">
+        <label for="name">Javascript </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter Javascript" name="Javascript" formControlName="Javascript">
+        </div>    
+    </div>
+    </div>
+    <div *ngIf="createemployeeForm.get('role')?.value=='Backend Engineer'">
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='NodeJs'">
+        <label for="name">NodeJs </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter NodeJs" name="NodeJs" formControlName="NodeJs">
+        </div>    
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='ExpressJs'">
+        <label for="name">ExpressJs </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter ExpressJs" name="ExpressJs" formControlName="ExpressJs">
+        </div>    
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4" *ngIf="createemployeeForm.get('role')?.value=='MongoDB'">
+        <label for="name">MongoDB </label>
+        </div>
+        <div class="col-sm-8">
+            <input type="name" id="name" class="form-control" placeholder="Enter MongoDB" name="MongoDB" formControlName="MongoDB">
+        </div>    
+    </div>
+    </div>
+    <button (click)="add()">add</button>
+    <button (click)="submit()">submit</button>
+    </form>
+    </div>
